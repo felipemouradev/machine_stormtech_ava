@@ -19,14 +19,14 @@ vagrantfile:
                         check_guest_tools: 0
                         update_guest_tools: 0
                 machines:
-                    vflm_5xylyvkatuw1:
-                        id: machine1
-                        hostname: machine1.puphpet
+                    vflm_86wkgik9l6mn:
+                        id: stormtech_machine
+                        hostname: machine1.stormtech
                         network:
                             private_network: 192.168.56.101
                             forwarded_port:
-                                vflmnfp_d7nxovb9sspo:
-                                    host: '8311'
+                                vflmnfp_xlvt9fwk4pcz:
+                                    host: '5384'
                                     guest: '22'
                         memory: '512'
                         cpus: '1'
@@ -38,7 +38,7 @@ vagrantfile:
                     - '--verbose'
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
         synced_folder:
-            vflsf_aqjjfz8zyrns:
+            vflsf_rn2xmqye9h26:
                 source: ./
                 target: /var/www
                 sync_type: default
@@ -115,7 +115,7 @@ nginx:
         names_hash_bucket_size: 128
     upstreams: {  }
     vhosts:
-        nxv_6976hzd4fpf9:
+        nxv_3mnmpub9t50o:
             server_name: books.dev
             server_aliases:
                 - www.books.dev
@@ -135,7 +135,7 @@ nginx:
             rewrite_to_https: '1'
             spdy: '1'
             locations:
-                nxvl_k4s034h58kpn:
+                nxvl_nztrmm1vv4vb:
                     location: /
                     try_files:
                         - $uri
@@ -146,7 +146,7 @@ nginx:
                     fastcgi_split_path: ''
                     proxy: ''
                     proxy_redirect: ''
-                nxvl_tvyd20sffsbk:
+                nxvl_c622fojanaij:
                     location: '~ \.php$'
                     try_files:
                         - $uri
@@ -177,7 +177,7 @@ apache:
         - proxy_fcgi
         - rewrite
     vhosts:
-        av_eqtczg8em2cr:
+        av_px56xwvn0kcc:
             servername: awesome.dev
             serveraliases:
                 - www.awesome.dev
@@ -196,7 +196,7 @@ apache:
             ssl_protocol: ''
             ssl_cipher: ''
             directories:
-                avd_28i2n8wspzxb:
+                avd_lynpic03st2j:
                     path: /var/www/awesome
                     options:
                         - Indexes
@@ -208,7 +208,7 @@ apache:
                         - 'all granted'
                     custom_fragment: ''
                     files_match:
-                        avdfm_35y3l5wbot9h:
+                        avdfm_ullui3x4pboc:
                             path: \.php$
                             sethandler: 'proxy:fcgi://127.0.0.1:9000'
                             custom_fragment: ''
@@ -227,6 +227,15 @@ php:
         php:
             - cli
             - intl
+            - curl
+            - gd
+            - imagick
+            - mbstring
+            - mcrypt
+            - mysql
+            - mysqlnd
+            - cgi
+            - xml
         pear: {  }
         pecl: {  }
     ini:
@@ -237,7 +246,7 @@ php:
     fpm_ini:
         error_log: /var/log/php-fpm.log
     fpm_pools:
-        phpfp_a3n7lkzt294r:
+        phpfp_sbpdmg4g526a:
             ini:
                 prefix: www
                 listen: '127.0.0.1:9000'
@@ -280,7 +289,7 @@ drush:
 ruby:
     install: '1'
     versions:
-        rv_csofk27f6447:
+        rv_hbvjoe9kl2x8:
             default: '1'
             bundler: '1'
             version: 1.9.3
@@ -298,7 +307,7 @@ nodejs:
         version: '5'
     npm_packages: {  }
 hhvm:
-    install: '0'
+    install: 0
     nightly: 0
     composer: '1'
     composer_home: ''
@@ -320,15 +329,15 @@ mariadb:
         override_options: {  }
     adminer: 0
     users:
-        mariadbnu_cu9dj3cj4vbl:
+        mariadbnu_tnlf0wjwyh28:
             name: user
-            password: '123456'
+            password: '123'
     databases:
-        mariadbnd_0rl4446b1cx0:
+        mariadbnd_5b94ow093z9o:
             name: booksorting
             sql: ''
     grants:
-        mariadbng_q1stvdavg8dj:
+        mariadbng_ygbeddfpj3jh:
             user: dbuser
             table: '*.*'
             privileges:
@@ -341,15 +350,15 @@ mysql:
         override_options: {  }
     adminer: 0
     users:
-        mysqlnu_9zztj7jdwb6a:
+        mysqlnu_jzw6mriq27n9:
             name: dbuser
             password: '123'
     databases:
-        mysqlnd_og1c2sk8idam:
+        mysqlnd_qsd66djjw1bm:
             name: dbname
             sql: ''
     grants:
-        mysqlng_7hlixqkev6du:
+        mysqlng_223v0pmv3pzg:
             user: dbuser
             table: '*.*'
             privileges:
@@ -414,7 +423,7 @@ elastic_search:
         version: 2.3.1
         java_install: true
     instances:
-        esi_t8dhort76qn1:
+        esi_qzctiy2pe511:
             name: es-01
 solr:
     install: '0'
