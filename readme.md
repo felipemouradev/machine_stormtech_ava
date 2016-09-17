@@ -3,6 +3,7 @@
 É necessario a instalação do Virtual box, Vagrant que podem ser encontradas nos links respectivos
 
 https://www.virtualbox.org/wiki/Linux_Downloads
+
 https://www.vagrantup.com/downloads.html
 
 Também é necessario a instalação do git:
