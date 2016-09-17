@@ -11,7 +11,7 @@ Os passos para instalação do Virtualbox podem ser encontrados também no site:
 Instalando o Virtualbox, adione o repositorio do virtualbox na sua lista de repositorios executando o comando a seguir:
 
 ```
-sudo sh -c  'echo "deb http://download.virtualbox.org/virtualbox/debian xenial contrib" >> /etc/apt/sources.list'
+$ sudo sh -c  'echo "deb http://download.virtualbox.org/virtualbox/debian xenial contrib" >> /etc/apt/sources.list'
 ```
 Registrando
 
