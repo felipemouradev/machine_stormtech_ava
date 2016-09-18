@@ -34,7 +34,7 @@ Nesse site você pode fazer o download do vagrant [https://www.vagrantup.com/dow
 logo apos no diretorio onde você fez download, execute:
 
 ```
-$ dpkg -i nome_do_pacote_vagrant_que_voce_baixou.deb
+$ sudo dpkg -i nome_do_pacote_vagrant_que_voce_baixou.deb
 ```
 
 Também é necessario a instalação do git:
