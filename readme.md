@@ -61,7 +61,7 @@ Isso irá instalar todas as depencias da vm e subir uma instância da mesma.
 Após isso, altere o /etc/hosts, acrescente:
 
 ```
-192.168.56.101  wwww.books.dev
+192.168.56.101  www.books.dev
 ```
 Salve...
 
